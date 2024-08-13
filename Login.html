@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page - E-Stitching</title>
+    <style>
+        /* Resetting margins and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+
+        /* Header and Navbar Styling */
+        header {
+            width: 100%; /* Make sure the header spans the full width of the viewport */
+            background-color: #1a1414;
+            padding: 20px 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Keep the navbar fixed at the top */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffe4e4;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007BFF;
+        }
+
+        .profile-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-icon a {
+            color: #ffe4e4;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .profile-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-icon img:hover {
+            transform: scale(1.1);
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url('https://cdn.unenvironment.org/s3fs-public/styles/article_billboard_image/public/2018-12/blouse-cover.jpg?itok=l9_oSf-b'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff00ff; /* Pink color for the button */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e600e6; /* Slightly darker pink on hover */
+}
+
+.register p {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.register a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://t4.ftcdn.net/jpg/04/00/99/75/360_F_400997596_GHAIaR7sAEj4xkFfkEGTOja002Qaf69l.jpg" alt="Logo"> 
+                <h1>E-Stiching</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/index.html#home">HOME</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/index.html#services">SERVICES</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/index.html#shop">SHOP</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/index.html#about">ABOUT US</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/index.html#http://127.0.0.1:5500/java/com/example/exoplayer/index.html#contact">CONTACT</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/cart.html">CART</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/appointment.html">APPOINTMENT</a></li>
+            </ul>
+            <div class="profile-icon">
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/login.html">Login</a> 
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/register2.html">Signup</a>
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/Profile.html">
+                <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile">
+            </div>
+        </nav>
+    </header>
+    <div class="login-container">
+        <form class="login-form">
+            <h2>LOG IN</h2>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <a href="#" class="forgot-password">Forgot your Password?</a>
+            <button type="submit" class="login-btn">Log In</button>
+            <div class="register">
+                <p>I don't have an account. <a href="http://127.0.0.1:5500/java/com/example/exoplayer/register2.html">Register</a></p>
+            </div>
+        </form>
+    </div>
