@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Page - E-Stitching</title>
+    <style>
+        /* Resetting margins and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+
+        /* Header and Navbar Styling */
+        header {
+            width: 100%; /* Make sure the header spans the full width of the viewport */
+            background-color: #1a1414;
+            padding: 20px 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Keep the navbar fixed at the top */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffe4e4;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007BFF;
+        }
+
+        .profile-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-icon a {
+            color: #ffe4e4;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .profile-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Account Page Styling */
+        .account-page {
+            max-width: 1200px;
+            margin: 150px auto; /* Added top margin to avoid overlap with navbar */
+            display: flex;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007BFF;
+        }
+
+        .sidebar ul li a::before {
+            content: '📄'; /* Placeholder icon, replace with actual icons if available */
+            margin-right: 10px;
+        }
+
+        .sidebar ul li a.logout::before {
+            content: '🔓';
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .main-content .no-orders {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .main-content .no-orders p {
+            font-size: 18px;
+            color: #777;
+        }
+
+        .main-content .no-orders a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .main-content .no-orders a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://t4.ftcdn.net/jpg/04/00/99/75/360_F_400997596_GHAIaR7sAEj4xkFfkEGTOja002Qaf69l.jpg" alt="Logo"> 
+                <h1>E-Stitching</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/E-Stitching%20website/index.html  ">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#shop">SHOP</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#cart">CART</a></li>
+                <li><a href="#appointment">APPOINTMENT</a></li>
+            </ul>
+            <div class="profile-icon">
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/login.html">Login</a> 
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/register2.html">Signup</a>
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/Profile.html">
+                <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Profile">
+            </div>
+        </nav>
+    </header>
+
+    <div class="account-page">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <img src="https://t4.ftcdn.net/jpg/04/00/99/75/360_F_400997596_GHAIaR7sAEj4xkFfkEGTOja002Qaf69l.jpg" alt="User Profile">
+            <h3>pranitashirsekar22</h3>
+            <p>pranitashirsekar22@gmail.com</p>
+            <ul>
+                
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/orders.html">ORDERS</a></li>
+                <li><a href="#">ACCOUNT DETAILS</a></li>
+                <li><a href="http://127.0.0.1:5500/java/com/example/exoplayer/Profileapp.html">APPOINTMENTS</a></li>
+                <li><a href="#" class="logout">LOG OUT</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <h2>Your Tailored Experience</h2>
+            <div class="no-orders">
+                <p> No appointments has been made yet.</p>
+                <a href="http://127.0.0.1:5500/java/com/example/exoplayer/appointment.html">Book Appointment</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
