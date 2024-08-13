@@ -1,0 +1,586 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.color {
+   background-image: url(https://www.solidbackgrounds.com/images/950x350/950x350-light-gray-solid-color-background.jpg);
+}
+
+/* Header Styling */
+header {
+    background-color: #1a1414;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(249, 245, 245, 0.1);
+    margin-top: -20px  ;
+    margin-left:-50px ;
+    margin-right: -50px;
+    
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-right: 0px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0px 70px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffe4e4;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Profile Icon Styling */
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.1);
+}
+profile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon a {
+    color: #ffe4e4;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Keep this for the hover effect */
+    
+    /* Positioning properties - Change these as needed */
+    position: absolute; /* Use 'absolute' to position the button relative to its nearest positioned ancestor */
+    top: 50%;           /* Adjust the vertical position */
+    left: 50%;          /* Adjust the horizontal position */
+    transform: translate(50%, 50%); /* Center the button in its container */
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.animated-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.animated-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.animated-button span {
+    position: relative;
+    z-index: 1;
+}
+
+#search-box {
+
+    display:flex; /* Use flexbox for layout */
+    align-items:start; /* Center items vertically */
+    background-color: #000000; /* White background for the box */
+    border: 1px solid #111111; /* Light border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 0px 0px; /* Padding inside the box */
+     /* Subtle shadow */
+    max-width: 400px; /* Maximum width for the search box */
+    margin-bottom: 650px  ; /* Center the box with margin */
+    margin-left:600px;
+    
+}
+
+/* Search Input Field */
+#search-box input[type="text"] {
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline on focus */
+    flex: 1; /* Allow input to take available space */
+    font-size: 1em; /* Font size for input text */
+    padding: 0px; /* Padding inside the input */
+    border-radius: 20px; /* Rounded corners for input */
+    color: #333; /* Dark text color */
+}
+
+/* Search Icon Link */
+#search-box a {
+    text-decoration: none; /* Remove underline from link */
+    color: #007BFF; /* Color for the search icon */
+    margin-left: 10px; /* Space between input and icon */
+}
+
+/* Search Icon Style */
+#search-box a i {
+    font-size: 1.2em; /* Size of the search icon */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover Effect for Search Icon */
+#search-box a:hover i {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+}
+nav ul li a:hover {
+    text-decoration: underline;
+   
+}
+
+.btn {
+    background-color: rgb(26, 26, 255);
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: medium;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-align: center;
+    text-transform: uppercase; 
+    transition: 2s;
+    margin-top: 100px;
+}
+.btn a {
+    color: white;
+    text-decoration: none;
+    padding :10px;
+}
+.hero :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+}
+ #home {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/03/12/21/tailoring-2575930_960_720.jpg'); /* Add the image URL here */
+    background-size:100%;
+    background-position:top ;
+    height: 0%; /* Full height */
+    display:block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    margin-left: -40px;
+    margin-right: -40px;
+    
+ }
+ #home .btn a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(26, 26, 255);
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+
+#home .btn a:hover {
+    background-color:  rgb(26, 26, 255);
+      
+}
+section {
+    padding: 50px 20px;
+    text-align: center;
+   
+}
+
+#services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+}
+
+.service-item, .product-item {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+#what-we-tailor {
+    text-align: left;
+    padding: 40px 0;
+    
+  }
+  #what-we-tailor {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+/* General Reset */
+
+
+#what-we-tailor {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.tailor-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tailor-item {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.tailor-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.tailor-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.tailor-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+}
+  
+
+#tailoring-services {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#tailoring-services h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#tailoring-services p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Flexbox Grid for Services */
+.services-grid {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly between items */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    gap: 20px; /* Adds space between items */
+}
+
+.service-item {
+    flex: 1; /* Allows each item to grow/shrink as needed */
+    max-width: 300px; /* Sets a maximum width for each item */
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}  
+/* General Reset */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #555;
+}
+
+#shop {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#shop h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-item .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.product-item .btn:hover {
+    background-color: #e64a19;
+}
+ 
+ 
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom:   
+ 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff6384;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
